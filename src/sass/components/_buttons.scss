@@ -21,6 +21,26 @@
   }
 }
 
+.cta-btn--plain {
+  display: inline-block;
+  position: relative;
+  padding: 0.8rem $default-font-size;
+  font-weight: bold;
+  line-height: 1;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+
 /* Hero Style */
 .cta-btn--hero {
   @include supportColorForIE11();
